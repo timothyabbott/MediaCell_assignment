@@ -12,6 +12,6 @@ def test_action_from_code():
 
 
 def test_code_from_action():
-    response = client.get("/actions/code/thanks")
+    response = client.get("/actions/id/thanks")
     assert response.status_code == 200
     assert response.json() == 5002
