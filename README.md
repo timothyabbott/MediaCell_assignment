@@ -1,5 +1,3 @@
-
-
 # Installation
 ## Pipenv
 To install the the required dependencies run `pipenv install` from the root of the project if using pipenv 
