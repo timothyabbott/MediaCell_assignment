@@ -5,13 +5,14 @@ from fastAPI_main import app
 client = TestClient(app)
 
 
-def test_action_from_code():
-    response = client.get("/actions/codeword/5002")
+# This will not be a list
+def test_id_from_codeword():
+    response = client.get("/actions/id/5002")
     assert response.status_code == 200
     assert response.json() == 'thanks'
 
 
 def test_code_from_action():
-    response = client.get("/actions/id/thanks")
+    response = client.get("/actions/codeword/alert")
     assert response.status_code == 200
-    assert response.json() == 5002
+    assert response.json() == [5000,5001]
